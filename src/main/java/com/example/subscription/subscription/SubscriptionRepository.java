@@ -1,4 +1,15 @@
 package com.example.subscription.subscription;
 
-public interface SubscriptionRepository {
+import org.springframework.data.ldap.repository.LdapRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface SubscriptionRepository extends LdapRepository<Subscription> {
+    /*
+        Optional<Subscription> findSubscriptionByDn(String dn){
+        Implementation needed
+        }
+        */
 }
