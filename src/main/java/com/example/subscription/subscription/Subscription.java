@@ -22,7 +22,6 @@ import org.ldaptive.beans.Entry;
         }
 )
 public class Subscription {
-    private int subscriptionId;
     private String[] supis;
     private String interGrpId;
     private boolean anyUeInd;
