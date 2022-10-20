@@ -13,11 +13,11 @@ public class SubscriptionService {
         JsonWriter jsonWriter = new JsonWriter(writer);
         SearchOperation search = new SearchOperation(new DefaultConnectionFactory("ldap://10.14.42.6:389"));
         SearchResponse response = search.execute(SearchRequest.builder()
-                    .dn("subscriptionId=100,dc=example,dc=com")
-                    .filter("subscriptionId=100")
+                    .dn("subscriptionId="+subscriptionId+",dc=example,dc=com")
+                    .filter("subscriptionId="+subscriptionId)
                     .build());
         jsonWriter.write(response);
-        System.out.println(response);
-        return  jsonWriter.toString();
+        System.out.println(writer.toString());
+        return  writer.toString();
     }
 }

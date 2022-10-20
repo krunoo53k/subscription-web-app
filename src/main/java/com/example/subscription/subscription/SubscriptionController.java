@@ -20,6 +20,6 @@ public class SubscriptionController {
             @RequestParam(required = false) String  subscribedEvent,
             @RequestParam(required = false ) String ssnsai
     ) throws IOException, LdapException {
-    return subscriptionService.getSubscription(subscriptionId, subscribedEvent, ssnsai).toString();
+    return subscriptionService.getSubscription(subscriptionId, subscribedEvent, ssnsai);
     }
 }
