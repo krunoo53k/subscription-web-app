@@ -2,6 +2,7 @@ package com.example.subscription.subscription;
 
 import org.ldaptive.*;
 import org.ldaptive.io.JsonWriter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -10,6 +11,12 @@ import java.io.IOException;
 import java.io.StringWriter;
 @Service
 public class SubscriptionService {
+    private final SubscriptionRepository subscriptionRepository;
+    @Autowired
+    public SubscriptionService(SubscriptionRepository subscriptionRepository) {
+        this.subscriptionRepository = subscriptionRepository;
+    }
+
     public String getSubscription(String subscriptionId, String subscribedEvent, String ssnsai) throws LdapException, IOException {
         StringWriter writer = new StringWriter();
         JsonWriter jsonWriter = new JsonWriter(writer);
