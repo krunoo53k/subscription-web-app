@@ -36,4 +36,62 @@ public class Subscription {
     private String suppFeat;
     private Snssai snssai;
     private EventFilters[] eventFilters;
+
+    public String[] getSupis() {
+        return supis;
+    }
+
+    public String getInterGrpId() {
+        return interGrpId;
+    }
+
+    public boolean isAnyUeInd() {
+        return anyUeInd;
+    }
+
+    public String getNotifMethod() {
+        return notifMethod;
+    }
+
+    public String getDnn() {
+        return dnn;
+    }
+
+    public String[] getSubscribedEvents() {
+        return subscribedEvents;
+    }
+
+    public String getSubsNotifUri() {
+        return subsNotifUri;
+    }
+
+    public String getSubsNotifId() {
+        return subsNotifId;
+    }
+
+    public int getMaxReportNbr() {
+        return maxReportNbr;
+    }
+
+    public String getExpiry() {
+        return expiry;
+    }
+
+    public int getRepPeriod() {
+        return repPeriod;
+    }
+
+    public String getSuppFeat() {
+        return suppFeat;
+    }
+
+    public Snssai getSnssai() {
+        return snssai;
+    }
+
+    public EventFilters[] getEventFilters() {
+        return eventFilters;
+    }
+
+
 }
